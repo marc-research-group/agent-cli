@@ -134,7 +134,7 @@ export class FileDiscoveryService {
   }
 
   /**
-   * Returns loaded patterns from .geminiignore
+   * Returns loaded patterns from .agentignore
    */
   getGeminiIgnorePatterns(): string[] {
     return this.geminiIgnoreFilter?.getPatterns() ?? [];

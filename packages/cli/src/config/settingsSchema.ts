@@ -590,11 +590,11 @@ const SETTINGS_SCHEMA = {
           },
           respectGeminiIgnore: {
             type: 'boolean',
-            label: 'Respect .geminiignore',
+            label: 'Respect .agentignore',
             category: 'Context',
             requiresRestart: true,
             default: true,
-            description: 'Respect .geminiignore files when searching',
+            description: 'Respect .agentignore files when searching',
             showInDialog: true,
           },
           enableRecursiveFileSearch: {

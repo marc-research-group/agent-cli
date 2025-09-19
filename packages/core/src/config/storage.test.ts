@@ -19,8 +19,8 @@ vi.mock('fs', async (importOriginal) => {
 import { Storage } from './storage.js';
 
 describe('Storage – getGlobalSettingsPath', () => {
-  it('returns path to ~/.gemini/settings.json', () => {
-    const expected = path.join(os.homedir(), '.gemini', 'settings.json');
+  it('returns path to ~/.agent/settings.json', () => {
+    const expected = path.join(os.homedir(), '.agent', 'settings.json');
     expect(Storage.getGlobalSettingsPath()).toBe(expected);
   });
 });
@@ -29,18 +29,18 @@ describe('Storage – additional helpers', () => {
   const projectRoot = '/tmp/project';
   const storage = new Storage(projectRoot);
 
-  it('getWorkspaceSettingsPath returns project/.gemini/settings.json', () => {
-    const expected = path.join(projectRoot, '.gemini', 'settings.json');
+  it('getWorkspaceSettingsPath returns project/.agent/settings.json', () => {
+    const expected = path.join(projectRoot, '.agent', 'settings.json');
     expect(storage.getWorkspaceSettingsPath()).toBe(expected);
   });
 
-  it('getUserCommandsDir returns ~/.gemini/commands', () => {
-    const expected = path.join(os.homedir(), '.gemini', 'commands');
+  it('getUserCommandsDir returns ~/.agent/commands', () => {
+    const expected = path.join(os.homedir(), '.agent', 'commands');
     expect(Storage.getUserCommandsDir()).toBe(expected);
   });
 
-  it('getProjectCommandsDir returns project/.gemini/commands', () => {
-    const expected = path.join(projectRoot, '.gemini', 'commands');
+  it('getProjectCommandsDir returns project/.agent/commands', () => {
+    const expected = path.join(projectRoot, '.agent', 'commands');
     expect(storage.getProjectCommandsDir()).toBe(expected);
   });
 
@@ -53,8 +53,8 @@ describe('Storage – additional helpers', () => {
     expect(Storage.getMcpOAuthTokensPath()).toBe(expected);
   });
 
-  it('getGlobalBinDir returns ~/.gemini/tmp/bin', () => {
-    const expected = path.join(os.homedir(), '.gemini', 'tmp', 'bin');
+  it('getGlobalBinDir returns ~/.agent/tmp/bin', () => {
+    const expected = path.join(os.homedir(), '.agent', 'tmp', 'bin');
     expect(Storage.getGlobalBinDir()).toBe(expected);
   });
 });

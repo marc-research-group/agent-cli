@@ -116,7 +116,7 @@ describe('ide-installer', () => {
           'code',
           [
             '--install-extension',
-            'google.gemini-cli-vscode-ide-companion',
+            'google.agent-cli-vscode-ide-companion',
             '--force',
           ],
           { stdio: 'pipe' },

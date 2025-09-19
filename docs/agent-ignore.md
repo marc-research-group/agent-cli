@@ -13,7 +13,7 @@ For the most part, `.agentignore` follows the conventions of `.gitignore` files:
 - Blank lines and lines starting with `#` are ignored.
 - Standard glob patterns are supported (such as `*`, `?`, and `[]`).
 - Putting a `/` at the end will only match directories.
-- Putting a `/` at the beginning anchors the path relative to the `.geminiignore` file.
+- Putting a `/` at the beginning anchors the path relative to the `.agentignore` file.
 - `!` negates a pattern.
 
 You can update your `.agentignore` file at any time. To apply the changes, you must restart your Agent CLI session.
@@ -56,4 +56,4 @@ Finally, you can exclude files and directories from exclusion with `!`:
 !README.md
 ```
 
-To remove paths from your `.geminiignore` file, delete the relevant lines.
+To remove paths from your `.agentignore` file, delete the relevant lines.
