@@ -10,7 +10,7 @@ import {
   type CodeAssistServer,
   UserTierId,
   getCodeAssistServer,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 
 export interface PrivacyState {
   isLoading: boolean;

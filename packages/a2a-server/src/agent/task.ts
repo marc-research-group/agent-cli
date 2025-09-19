@@ -15,7 +15,7 @@ import {
   isNodeError,
   parseAndFormatApiError,
   safeLiteralReplace,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import type {
   ToolConfirmationPayload,
   CompletedToolCall,
@@ -27,7 +27,7 @@ import type {
   Config,
   UserTierId,
   AnsiOutput,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import type { RequestContext } from '@a2a-js/sdk/server';
 import { type ExecutionEventBus } from '@a2a-js/sdk/server';
 import type {

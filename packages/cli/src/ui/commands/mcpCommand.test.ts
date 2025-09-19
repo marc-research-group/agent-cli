@@ -13,15 +13,15 @@ import {
   getMCPServerStatus,
   getMCPDiscoveryState,
   DiscoveredMCPTool,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 
 import type { MessageActionReturn } from './types.js';
 import type { CallableTool } from '@google/genai';
 import { Type } from '@google/genai';
 
-vi.mock('@google/gemini-cli-core', async (importOriginal) => {
+vi.mock('@dloring1988/agent-cli-core', async (importOriginal) => {
   const actual =
-    await importOriginal<typeof import('@google/gemini-cli-core')>();
+    await importOriginal<typeof import('@dloring1988/agent-cli-core')>();
   const mockAuthenticate = vi.fn();
   return {
     ...actual,
@@ -892,7 +892,7 @@ describe('mcpCommand', () => {
       // Mock the reloadCommands function
       context.ui.reloadCommands = vi.fn();
 
-      const { MCPOAuthProvider } = await import('@google/gemini-cli-core');
+      const { MCPOAuthProvider } = await import('@dloring1988/agent-cli-core');
       const mockAuthProvider = new MCPOAuthProvider();
 
       const authCommand = mcpCommand.subCommands?.find(
@@ -930,7 +930,7 @@ describe('mcpCommand', () => {
         },
       });
 
-      const { MCPOAuthProvider } = await import('@google/gemini-cli-core');
+      const { MCPOAuthProvider } = await import('@dloring1988/agent-cli-core');
       const mockAuthProvider = new MCPOAuthProvider();
       vi.mocked(mockAuthProvider.authenticate).mockRejectedValue(
         new Error('Auth failed'),

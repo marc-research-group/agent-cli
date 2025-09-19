@@ -7,7 +7,7 @@
 import type React from 'react';
 import { Box, Text } from 'ink';
 import { theme } from '../semantic-colors.js';
-import { type Config } from '@google/gemini-cli-core';
+import { type Config } from '@dloring1988/agent-cli-core';
 
 interface TipsProps {
   config: Config;

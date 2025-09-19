@@ -1,10 +1,10 @@
 {
-  "name": "@google/gemini-cli-core",
+  "name": "@dloring1988/agent-cli-core",
   "version": "0.7.0-nightly.20250918.2722473a",
-  "description": "Gemini CLI Core",
+  "description": "Agent CLI Core",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/google-gemini/gemini-cli.git"
+    "url": "git+https://github.com/dloring1988/agent-cli.git"
   },
   "type": "module",
   "main": "dist/index.js",
@@ -61,7 +61,7 @@
     "shell-quote": "^1.8.3",
     "simple-git": "^3.28.0",
     "strip-ansi": "^7.1.0",
-    "undici": "^7.10.0",
+    "undici": "^6.19.0",
     "ws": "^8.18.0"
   },
   "optionalDependencies": {
@@ -74,7 +74,7 @@
     "node-pty": "^1.0.0"
   },
   "devDependencies": {
-    "@google/gemini-cli-test-utils": "file:../test-utils",
+    "@dloring1988/agent-cli-test-utils": "file:../test-utils",
     "@types/diff": "^7.0.2",
     "@types/dotenv": "^6.1.1",
     "@types/fast-levenshtein": "^0.0.4",

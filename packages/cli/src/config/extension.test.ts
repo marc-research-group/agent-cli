@@ -27,7 +27,7 @@ import {
   ClearcutLogger,
   type Config,
   ExtensionUninstallEvent,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import { execSync } from 'node:child_process';
 import { SettingScope } from './settings.js';
 import { isWorkspaceTrusted } from './trustedFolders.js';
@@ -69,9 +69,9 @@ vi.mock('./trustedFolders.js', async (importOriginal) => {
   };
 });
 
-vi.mock('@google/gemini-cli-core', async (importOriginal) => {
+vi.mock('@dloring1988/agent-cli-core', async (importOriginal) => {
   const actual =
-    await importOriginal<typeof import('@google/gemini-cli-core')>();
+    await importOriginal<typeof import('@dloring1988/agent-cli-core')>();
   const mockLogExtensionInstallEvent = vi.fn();
   const mockLogExtensionUninstallEvent = vi.fn();
   return {

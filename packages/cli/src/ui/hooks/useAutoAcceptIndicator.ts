@@ -5,7 +5,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import { ApprovalMode, type Config } from '@google/gemini-cli-core';
+import { ApprovalMode, type Config } from '@dloring1988/agent-cli-core';
 import { useKeypress } from './useKeypress.js';
 import type { HistoryItemWithoutId } from '../types.js';
 import { MessageType } from '../types.js';

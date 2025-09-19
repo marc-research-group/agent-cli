@@ -6,7 +6,7 @@
 
 import { Text } from 'ink';
 import { theme } from '../semantic-colors.js';
-import { tokenLimit } from '@google/gemini-cli-core';
+import { tokenLimit } from '@dloring1988/agent-cli-core';
 
 export const ContextUsageDisplay = ({
   promptTokenCount,

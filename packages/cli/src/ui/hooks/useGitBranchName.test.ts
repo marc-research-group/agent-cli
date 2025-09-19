@@ -12,13 +12,13 @@ import { useGitBranchName } from './useGitBranchName.js';
 import { fs, vol } from 'memfs'; // For mocking fs
 
 import type { FSWatcher } from 'memfs/lib/volume.js';
-import { spawnAsync as mockSpawnAsync } from '@google/gemini-cli-core';
+import { spawnAsync as mockSpawnAsync } from '@dloring1988/agent-cli-core';
 
-// Mock @google/gemini-cli-core
-vi.mock('@google/gemini-cli-core', async () => {
+// Mock @dloring1988/agent-cli-core
+vi.mock('@dloring1988/agent-cli-core', async () => {
   const original = await vi.importActual<
-    typeof import('@google/gemini-cli-core')
-  >('@google/gemini-cli-core');
+    typeof import('@dloring1988/agent-cli-core')
+  >('@dloring1988/agent-cli-core');
   return {
     ...original,
     spawnAsync: vi.fn(),

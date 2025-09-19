@@ -16,7 +16,7 @@ import type {
   FileFilteringOptions,
   MCPServerConfig,
   OutputFormat,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import { extensionsCommand } from '../commands/extensions.js';
 import {
   Config,
@@ -32,7 +32,7 @@ import {
   ShellTool,
   EditTool,
   WriteFileTool,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import type { Settings } from './settings.js';
 
 import type { Extension } from './extension.js';

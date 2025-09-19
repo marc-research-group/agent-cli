@@ -11,7 +11,7 @@ import type {
   GeminiChat,
   ToolResult,
   ToolCallConfirmationDetails,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import {
   AuthType,
   logToolCall,
@@ -25,7 +25,7 @@ import {
   MCPServerConfig,
   DiscoveredMCPTool,
   StreamEventType,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import * as acp from './acp.js';
 import { AcpFileSystemService } from './fileSystemService.js';
 import { Readable, Writable } from 'node:stream';

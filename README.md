@@ -1,15 +1,15 @@
-# Gemini CLI
+# Agent CLI
 
-[![Gemini CLI CI](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml)
-[![Gemini CLI E2E](https://github.com/google-gemini/gemini-cli/actions/workflows/e2e.yml/badge.svg)](https://github.com/google-gemini/gemini-cli/actions/workflows/e2e.yml)
-[![Version](https://img.shields.io/npm/v/@google/gemini-cli)](https://www.npmjs.com/package/@google/gemini-cli)
-[![License](https://img.shields.io/github/license/google-gemini/gemini-cli)](https://github.com/google-gemini/gemini-cli/blob/main/LICENSE)
+[![Agent CLI CI](https://github.com/dloring1988/agent-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/dloring1988/agent-cli/actions/workflows/ci.yml)
+[![Agent CLI E2E](https://github.com/dloring1988/agent-cli/actions/workflows/e2e.yml/badge.svg)](https://github.com/dloring1988/agent-cli/actions/workflows/e2e.yml)
+[![Version](https://img.shields.io/npm/v/@dloring1988/agent-cli)](https://www.npmjs.com/package/@dloring1988/agent-cli)
+[![License](https://img.shields.io/github/license/dloring1988/agent-cli)](https://github.com/dloring1988/agent-cli/blob/main/LICENSE)
 
-![Gemini CLI Screenshot](./docs/assets/gemini-screenshot.png)
+![Agent CLI Screenshot](./docs/assets/gemini-screenshot.png)
 
-Gemini CLI is an open-source AI agent that brings the power of Gemini directly into your terminal. It provides lightweight access to Gemini, giving you the most direct path from your prompt to our model.
+Agent CLI is an open-source AI agent that brings the power of Gemini directly into your terminal. It provides lightweight access to Gemini, giving you the most direct path from your prompt to our model.
 
-## 🚀 Why Gemini CLI?
+## 🚀 Why Agent CLI?
 
 - **🎯 Free tier**: 60 requests/min and 1,000 requests/day with personal Google account
 - **🧠 Powerful Gemini 2.5 Pro**: Access to 1M token context window
@@ -26,19 +26,19 @@ Gemini CLI is an open-source AI agent that brings the power of Gemini directly i
 
 ```bash
 # Using npx (no installation required)
-npx https://github.com/google-gemini/gemini-cli
+npx https://github.com/dloring1988/agent-cli
 ```
 
 #### Install globally with npm
 
 ```bash
-npm install -g @google/gemini-cli
+npm install -g @dloring1988/agent-cli
 ```
 
 #### Install globally with Homebrew (macOS/Linux)
 
 ```bash
-brew install gemini-cli
+brew install agent-cli
 ```
 
 #### System Requirements
@@ -55,7 +55,7 @@ See [Releases](./docs/releases.md) for more details.
 New preview releases will be published each week at UTC 2359 on Tuesdays. These releases will not have been fully vetted and may contain regressions or other outstanding issues. Please help us test and install with `preview` tag.
 
 ```bash
-npm install -g @google/gemini-cli@preview
+npm install -g @dloring1988/agent-cli@preview
 ```
 
 ### Stable
@@ -63,7 +63,7 @@ npm install -g @google/gemini-cli@preview
 - New stable releases will be published each week at UTC 2000 on Tuesdays, this will be the full promotion of last week's `preview` release + any bug fixes and validations. Use `latest` tag.
 
 ```bash
-npm install -g @google/gemini-cli@latest
+npm install -g @dloring1988/agent-cli@latest
 ```
 
 ### Nightly
@@ -71,7 +71,7 @@ npm install -g @google/gemini-cli@latest
 - New releases will be published each week at UTC 0000 each day, This will be all changes from the main branch as represented at time of release. It should be assumed there are pending validations and issues. Use `nightly` tag.
 
 ```bash
-npm install -g @google/gemini-cli@nightly
+npm install -g @dloring1988/agent-cli@nightly
 ```
 
 ## 📋 Key Features
@@ -92,15 +92,15 @@ npm install -g @google/gemini-cli@nightly
 
 - Ground your queries with built-in [Google Search](https://ai.google.dev/gemini-api/docs/grounding) for real-time information
 - Conversation checkpointing to save and resume complex sessions
-- Custom context files (GEMINI.md) to tailor behavior for your projects
+- Custom context files (AGENT.md) to tailor behavior for your projects
 
 ### GitHub Integration
 
-Integrate Gemini CLI directly into your GitHub workflows with [**Gemini CLI GitHub Action**](https://github.com/google-github-actions/run-gemini-cli):
+Integrate Agent CLI directly into your GitHub workflows with [**Agent CLI GitHub Action**](https://github.com/dloring1988/run-agent-cli):
 
 - **Pull Request Reviews**: Automated code review with contextual feedback and suggestions
 - **Issue Triage**: Automated labeling and prioritization of GitHub issues based on content analysis
-- **On-demand Assistance**: Mention `@gemini-cli` in issues and pull requests for help with debugging, explanations, or task delegation
+- **On-demand Assistance**: Mention `@agent-cli` in issues and pull requests for help with debugging, explanations, or task delegation
 - **Custom Workflows**: Build automated, scheduled and on-demand workflows tailored to your team's needs
 
 ## 🔐 Authentication Options
@@ -118,10 +118,10 @@ Choose the authentication method that best fits your needs:
 - **No API key management** - just sign in with your Google account
 - **Automatic updates** to latest models
 
-#### Start Gemini CLI, then choose _Login with Google_ and follow the browser authentication flow when prompted
+#### Start Agent CLI, then choose _Login with Google_ and follow the browser authentication flow when prompted
 
 ```bash
-gemini
+agent
 ```
 
 #### If you are using a paid Code Assist License from your organization, remember to set the Google Cloud Project
@@ -129,7 +129,7 @@ gemini
 ```bash
 # Set your Google Cloud Project
 export GOOGLE_CLOUD_PROJECT="YOUR_PROJECT_NAME"
-gemini
+agent
 ```
 
 ### Option 2: Gemini API Key
@@ -145,7 +145,7 @@ gemini
 ```bash
 # Get your key from https://aistudio.google.com/apikey
 export GEMINI_API_KEY="YOUR_API_KEY"
-gemini
+agent
 ```
 
 ### Option 3: Vertex AI
@@ -162,7 +162,7 @@ gemini
 # Get your key from Google Cloud Console
 export GOOGLE_API_KEY="YOUR_API_KEY"
 export GOOGLE_GENAI_USE_VERTEXAI=true
-gemini
+agent
 ```
 
 For Google Workspace accounts and other authentication methods, see the [authentication guide](./docs/cli/authentication.md).
@@ -174,19 +174,19 @@ For Google Workspace accounts and other authentication methods, see the [authent
 #### Start in current directory
 
 ```bash
-gemini
+agent
 ```
 
 #### Include multiple directories
 
 ```bash
-gemini --include-directories ../lib,../docs
+agent --include-directories ../lib,../docs
 ```
 
 #### Use specific model
 
 ```bash
-gemini -m gemini-2.5-flash
+agent -m gemini-2.5-flash
 ```
 
 #### Non-interactive mode for scripts
@@ -194,14 +194,14 @@ gemini -m gemini-2.5-flash
 Get a simple text response:
 
 ```bash
-gemini -p "Explain the architecture of this codebase"
+agent -p "Explain the architecture of this codebase"
 ```
 
 For more advanced scripting, including how to parse JSON and handle errors, use
 the `--output-format json` flag to get structured output:
 
 ```bash
-gemini -p "Explain the architecture of this codebase" --output-format json
+agent -p "Explain the architecture of this codebase" --output-format json
 ```
 
 ### Quick Examples
@@ -210,16 +210,16 @@ gemini -p "Explain the architecture of this codebase" --output-format json
 
 ```bash
 cd new-project/
-gemini
+agent
 > Write me a Discord bot that answers questions using a FAQ.md file I will provide
 ```
 
 #### Analyze existing code
 
 ```bash
-git clone https://github.com/google-gemini/gemini-cli
-cd gemini-cli
-gemini
+git clone https://github.com/dloring1988/agent-cli
+cd agent-cli
+agent
 > Give me a summary of all of the changes that went in yesterday
 ```
 
@@ -236,7 +236,7 @@ gemini
 
 - [**Commands Reference**](./docs/cli/commands.md) - All slash commands (`/help`, `/chat`, `/mcp`, etc.)
 - [**Checkpointing**](./docs/checkpointing.md) - Save and resume conversations
-- [**Memory Management**](./docs/tools/memory.md) - Using GEMINI.md context files
+- [**Memory Management**](./docs/tools/memory.md) - Using AGENT.md context files
 - [**Token Caching**](./docs/cli/token-caching.md) - Optimize token usage
 
 ### Tools & Extensions
@@ -262,7 +262,7 @@ gemini
 
 - [**Settings Reference**](./docs/cli/configuration.md) - All configuration options
 - [**Theme Customization**](./docs/cli/themes.md) - Visual customization
-- [**.gemini Directory**](./docs/gemini-ignore.md) - Project-specific settings
+- [**.agent Directory**](./docs/agent-ignore.md) - Project-specific settings
 - [**Environment Variables**](./docs/cli/configuration.md#environment-variables)
 
 ### Troubleshooting & Support
@@ -273,7 +273,7 @@ gemini
 
 ### Using MCP Servers
 
-Configure MCP servers in `~/.gemini/settings.json` to extend Gemini CLI with custom tools:
+Configure MCP servers in `~/.agent/settings.json` to extend Agent CLI with custom tools:
 
 ```text
 > @github List my open pull requests
@@ -285,7 +285,7 @@ See the [MCP Server Integration guide](./docs/tools/mcp-server.md) for setup ins
 
 ## 🤝 Contributing
 
-We welcome contributions! Gemini CLI is fully open source (Apache 2.0), and we encourage the community to:
+We welcome contributions! Agent CLI is fully open source (Apache 2.0), and we encourage the community to:
 
 - Report bugs and suggest features
 - Improve documentation
@@ -299,9 +299,9 @@ Check our [Official Roadmap](https://github.com/orgs/google-gemini/projects/11/)
 ## 📖 Resources
 
 - **[Official Roadmap](./ROADMAP.md)** - See what's coming next
-- **[NPM Package](https://www.npmjs.com/package/@google/gemini-cli)** - Package registry
-- **[GitHub Issues](https://github.com/google-gemini/gemini-cli/issues)** - Report bugs or request features
-- **[Security Advisories](https://github.com/google-gemini/gemini-cli/security/advisories)** - Security updates
+- **[NPM Package](https://www.npmjs.com/package/@dloring1988/agent-cli)** - Package registry
+- **[GitHub Issues](https://github.com/dloring1988/agent-cli/issues)** - Report bugs or request features
+- **[Security Advisories](https://github.com/dloring1988/agent-cli/security/advisories)** - Security updates
 
 ### Uninstall
 

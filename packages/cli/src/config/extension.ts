@@ -8,7 +8,7 @@ import type {
   MCPServerConfig,
   GeminiCLIExtension,
   ExtensionInstallMetadata,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import {
   GEMINI_DIR,
   Storage,
@@ -16,7 +16,7 @@ import {
   Config,
   ExtensionInstallEvent,
   ExtensionUninstallEvent,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as os from 'node:os';

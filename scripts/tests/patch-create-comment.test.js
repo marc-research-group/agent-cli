@@ -54,7 +54,7 @@ describe('patch-create-comment', () => {
   describe('Environment Variable vs File Reading', () => {
     it('should prefer LOG_CONTENT environment variable over file', () => {
       const result = runPatchCreateComment(
-        '--original-pr 8655 --exit-code 0 --commit abc1234 --channel preview --repository google-gemini/gemini-cli --test',
+        '--original-pr 8655 --exit-code 0 --commit abc1234 --channel preview --repository dloring1988/agent-cli --test',
         {
           LOG_CONTENT:
             'Creating hotfix branch hotfix/v0.5.3/preview/cherry-pick-abc1234 from release/v0.5.3',
@@ -125,14 +125,14 @@ describe('patch-create-comment', () => {
         '--original-pr 8655 --exit-code 0 --commit ghi9012 --channel stable --repository google-gemini/gemini-cli --test',
         {
           LOG_CONTENT:
-            'Hotfix branch hotfix/v0.4.1/stable/cherry-pick-ghi9012 already has an open PR.\nFound existing PR #8700: https://github.com/google-gemini/gemini-cli/pull/8700',
+            'Hotfix branch hotfix/v0.4.1/stable/cherry-pick-ghi9012 already has an open PR.\nFound existing PR #8700: https://github.com/dloring1988/agent-cli/pull/8700',
         },
       );
 
       expect(result.success).toBe(true);
       expect(result.stdout).toContain('ℹ️ **Patch PR already exists!**');
       expect(result.stdout).toContain(
-        'A patch PR for this change already exists: [#8700](https://github.com/google-gemini/gemini-cli/pull/8700)',
+        'A patch PR for this change already exists: [#8700](https://github.com/dloring1988/agent-cli/pull/8700)',
       );
       expect(result.stdout).toContain(
         'Review and approve the existing patch PR',

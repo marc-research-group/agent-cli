@@ -5,7 +5,7 @@
  */
 
 import * as osActual from 'node:os';
-import { ideContextStore } from '@google/gemini-cli-core';
+import { ideContextStore } from '@dloring1988/agent-cli-core';
 import {
   describe,
   it,

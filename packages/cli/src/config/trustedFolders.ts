@@ -11,7 +11,7 @@ import {
   getErrorMessage,
   isWithinRoot,
   ideContextStore,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import type { Settings } from './settings.js';
 import stripJsonComments from 'strip-json-comments';
 

@@ -6,7 +6,7 @@
 
 import type { CommandModule } from 'yargs';
 import { installExtension } from '../../config/extension.js';
-import type { ExtensionInstallMetadata } from '@google/gemini-cli-core';
+import type { ExtensionInstallMetadata } from '@dloring1988/agent-cli-core';
 
 import { getErrorMessage } from '../../utils/errors.js';
 

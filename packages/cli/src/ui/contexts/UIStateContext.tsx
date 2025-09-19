@@ -23,7 +23,7 @@ import type {
   UserTierId,
   IdeInfo,
   FallbackIntent,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import type { DOMElement } from 'ink';
 import type { SessionStatsState } from '../contexts/SessionContext.js';
 import type { UpdateObject } from '../utils/updateCheck.js';

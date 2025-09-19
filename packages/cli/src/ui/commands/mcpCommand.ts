@@ -11,7 +11,7 @@ import type {
   MessageActionReturn,
 } from './types.js';
 import { CommandKind } from './types.js';
-import type { DiscoveredMCPPrompt } from '@google/gemini-cli-core';
+import type { DiscoveredMCPPrompt } from '@dloring1988/agent-cli-core';
 import {
   DiscoveredMCPTool,
   getMCPDiscoveryState,
@@ -21,7 +21,7 @@ import {
   mcpServerRequiresOAuth,
   getErrorMessage,
   MCPOAuthTokenStorage,
-} from '@google/gemini-cli-core';
+} from '@dloring1988/agent-cli-core';
 import { appEvents, AppEvent } from '../../utils/events.js';
 
 const COLOR_GREEN = '\u001b[32m';
@@ -141,7 +141,7 @@ const getMcpStatus = async (
       needsAuthHint = true;
       try {
         const { MCPOAuthTokenStorage } = await import(
-          '@google/gemini-cli-core'
+          '@dloring1988/agent-cli-core'
         );
         const tokenStorage = new MCPOAuthTokenStorage();
         const hasToken = await tokenStorage.getCredentials(serverName);
@@ -385,7 +385,7 @@ const authCommand: SlashCommand = {
       );
 
       // Import dynamically to avoid circular dependencies
-      const { MCPOAuthProvider } = await import('@google/gemini-cli-core');
+      const { MCPOAuthProvider } = await import('@dloring1988/agent-cli-core');
 
       let oauthConfig = server.oauth;
       if (!oauthConfig) {

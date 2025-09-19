@@ -15,7 +15,7 @@ import {
 } from '../../config/extension.js';
 import { createExtension } from '../../test-utils/createExtension.js';
 import { useExtensionUpdates } from './useExtensionUpdates.js';
-import { GEMINI_DIR, type GeminiCLIExtension } from '@google/gemini-cli-core';
+import { GEMINI_DIR, type GeminiCLIExtension } from '@dloring1988/agent-cli-core';
 import { isWorkspaceTrusted } from '../../config/trustedFolders.js';
 import { renderHook, waitFor } from '@testing-library/react';
 import { MessageType } from '../types.js';
@@ -56,9 +56,9 @@ vi.mock('../../config/trustedFolders.js', async (importOriginal) => {
   };
 });
 
-vi.mock('@google/gemini-cli-core', async (importOriginal) => {
+vi.mock('@dloring1988/agent-cli-core', async (importOriginal) => {
   const actual =
-    await importOriginal<typeof import('@google/gemini-cli-core')>();
+    await importOriginal<typeof import('@dloring1988/agent-cli-core')>();
   const mockLogExtensionInstallEvent = vi.fn();
   const mockLogExtensionUninstallEvent = vi.fn();
   return {

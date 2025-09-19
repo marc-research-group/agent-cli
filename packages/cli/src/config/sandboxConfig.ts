@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import type { SandboxConfig } from '@google/gemini-cli-core';
-import { FatalSandboxError } from '@google/gemini-cli-core';
+import type { SandboxConfig } from '@dloring1988/agent-cli-core';
+import { FatalSandboxError } from '@dloring1988/agent-cli-core';
 import commandExists from 'command-exists';
 import * as os from 'node:os';
 import { getPackageJson } from '../utils/package.js';

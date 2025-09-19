@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import type { GeminiCLIExtension } from '@google/gemini-cli-core';
+import type { GeminiCLIExtension } from '@dloring1988/agent-cli-core';
 import {
   updateAllUpdatableExtensions,
   updateExtension,
