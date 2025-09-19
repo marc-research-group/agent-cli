@@ -26,11 +26,11 @@ export const Tips: React.FC<TipsProps> = ({ config }) => {
       </Text>
       {geminiMdFileCount === 0 && (
         <Text color={theme.text.primary}>
-          3. Create{' '}
+          3. Look for an{' '}
           <Text bold color={theme.text.accent}>
-            GEMINI.md
+            AGENT.md
           </Text>{' '}
-          files to customize your interactions with Gemini.
+          file to customize your interactions.
         </Text>
       )}
       <Text color={theme.text.primary}>
